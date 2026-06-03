@@ -1,0 +1,10 @@
+# Ignore massive binary results and solver scratch files
+*.h3d
+*.res
+*.op2
+*.pch
+*.out
+*.stat
+*.html
+# Ignore MATLAB workspace states
+*.mat

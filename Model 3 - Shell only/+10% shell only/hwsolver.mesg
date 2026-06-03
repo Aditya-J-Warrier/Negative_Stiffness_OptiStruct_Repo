@@ -1,0 +1,4 @@
+  
+ *** ERROR # 720 ***
+ Invalid static SUBCASE that has no load or enforced displacement.
+     subcase id = 1
