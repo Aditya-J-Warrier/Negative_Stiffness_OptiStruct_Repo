@@ -263,7 +263,6 @@ CQUAD8        60       3      14      11      12      13     178     179+
 +            174     171                                                
 $
 $$
-$
 $$
 $$------------------------------------------------------------------------------$
 $$    HyperMesh name and color information for generic components               $
@@ -286,12 +285,12 @@ $$  PSHELL Data
 $$
 $HMNAME PROP                   2"top_shell" 4
 $HWCOLOR PROP                  2       8
-PSHELL         2       10.005          1               1        0.0     +       
-+                                         -0.0025
+PSHELL         2       10.01           1               1        0.0     +       
++                                         -0.005
 $HMNAME PROP                   3"bottom_shell" 4
 $HWCOLOR PROP                  3      20
-PSHELL         3       10.005          1               1        0.0     +       
-+                                         -0.0025
+PSHELL         3       10.01           1               1        0.0     +       
++                                         -0.005
 $$
 $$  PSOLID Data
 $$

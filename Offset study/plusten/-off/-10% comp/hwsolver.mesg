@@ -1,0 +1,7 @@
+ 
+
+ *** See next message about line 374 from file: minustencompcrctnode.fem
+  "PSHELL         2       1-0.05          1               1        0.0     +"
+  
+ *** ERROR # 1000 *** in the input data:
+ Incorrect data in field # 4.
