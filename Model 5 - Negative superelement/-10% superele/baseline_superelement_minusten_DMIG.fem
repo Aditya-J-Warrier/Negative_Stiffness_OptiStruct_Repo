@@ -22,7 +22,7 @@ $
 SUBCASE        1
   LABEL static
 ANALYSIS STATICS
-  SPC =        1
+$ SPC =        1
   LOAD =        2
 $$--------------------------------------------------------------
 $$ HYPERMESH TAGS 

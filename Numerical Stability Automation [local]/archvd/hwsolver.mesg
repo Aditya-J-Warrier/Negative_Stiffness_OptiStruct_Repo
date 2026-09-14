@@ -1,0 +1,11 @@
+ 
+
+ *** See next message about line 35 from file:
+     master_shell_t_100.1_AX.fem
+  "INCLUDE  ../shell_t_100.1_AX.pch"
+  
+ *** ERROR # 1012 ***
+ Could not open INCLUDE file "../shell_t_100.1_AX.pch".
+  
+ *** Run terminated because of error(s) in the input data.
+  

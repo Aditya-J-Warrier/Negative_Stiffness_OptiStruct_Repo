@@ -1,0 +1,14 @@
+To run OS through cmd:
+$solver = Get-ChildItem -Path "C:\Program Files\Altair\2022" -Filter "optistruct.bat" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
+& $solver "baseline_modelK_DMIG.fem"
+
+
+1. To generate positive superele iterations in cmd:
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.\run_all.ps1
+
+
+2. To generate negative superele using cmd:
+
+python invert_dmig_automated.py
