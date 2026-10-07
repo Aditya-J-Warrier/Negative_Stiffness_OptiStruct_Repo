@@ -15,15 +15,23 @@ $$------------------------------------------------------------------------------
 $$                      Case Control Cards                                      $
 $$------------------------------------------------------------------------------$
 K2GG = KAAX
+M2GG = MAAX   
 PARAM, EXTOUT, DMIGPCH
 $
-$HMNAME LOADSTEP               1"static"       1
+$ --- COMMENTED OUT OLD STEP ---
+$ $HMNAME LOADSTEP               1"static"       1
+$ SUBCASE        1
+$   LABEL static
+$   ANALYSIS STATICS
+$   LOAD =        2
+$ ------------------------------
 $
-SUBCASE        1
-  LABEL static
-ANALYSIS STATICS
-$ SPC =        1
-  LOAD =        2
+$ --- CLEAN MODAL SUBCASE ---
+SUBCASE        2
+  LABEL Modal_Superelement
+  ANALYSIS = MODES
+  METHOD = 999
+$
 $$--------------------------------------------------------------
 $$ HYPERMESH TAGS 
 $$--------------------------------------------------------------
@@ -31,13 +39,14 @@ $$BEGIN TAGS
 $$END TAGS
 $
 BEGIN BULK
+PARAM, COUPMASS, 1
+PARAM, NEGMASS, YES
+EIGRL, 999, , , 10 
 $$
 INCLUDE 'shell_t_104_AX_negative.pch'
-$$
-PARAM,EXTOUT,DMIGPCH
-$$
 $$  Stacking Information for Ply-Based Composite Definition
 $$
+
 
 $$
 $$  GRID Data
@@ -378,10 +387,10 @@ $$  PSHELL Data
 $$
 $HMNAME PROP                   2"top_shell" 4
 $HWCOLOR PROP                  2       8
-PSHELL         2       10.001          1               1        0.0      -2.0000
+PSHELL         2       10.001          1               1        0.0     -48.0000
 $HMNAME PROP                   3"bottom_shell" 4
 $HWCOLOR PROP                  3      20
-PSHELL         3       10.001          1               1        0.0      -2.0000
+PSHELL         3       10.001          1               1        0.0      48.0000
 $$
 $$  PSOLID Data
 $$

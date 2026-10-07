@@ -20,6 +20,7 @@ $HMNAME LOADSTEP               1"static"       0
 $
 SUBCASE        1
   LABEL static
+  METHOD = 999
 $$--------------------------------------------------------------
 $$ HYPERMESH TAGS 
 $$--------------------------------------------------------------
@@ -27,7 +28,9 @@ $$BEGIN TAGS
 $$END TAGS
 $
 BEGIN BULK
+EIGRL, 999, , , 1
 PARAM,EXTOUT,DMIGPCH
+PARAM, COUPMASS, 1
 PARAM,AUTOSPC,NO
 $$
 $$  Stacking Information for Ply-Based Composite Definition
@@ -329,7 +332,7 @@ $$  MAT1 Data
 $$
 $HMNAME MAT                    1"S235" "MAT1"
 $HWCOLOR MAT                   1       7
-MAT1           1210000.08.0+10  0.3     7.85-9                          
+MAT1           1210000.080000.0 0.3     7.85-9                          
 $$
 $$------------------------------------------------------------------------------$
 $$ HyperMesh Commands for loadcollectors name and color information $

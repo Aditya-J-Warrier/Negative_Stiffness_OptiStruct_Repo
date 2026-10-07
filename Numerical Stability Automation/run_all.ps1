@@ -1,5 +1,11 @@
 # --- Configuration ---
-$templateFile = "plusfiveshellonly_scaled.fem"  
+# 1. FIX LICENSE: Force the solver to use the university license server over the VPN
+#$env:ALTAIR_LICENSE_PATH = "50120@hlrslic1.hlrs.de"
+
+# 2. FIX PATHS: Force literal path handling so the bracket [local] folder name doesn't crash the script
+Set-Location -LiteralPath $PSScriptRoot
+$templateFile = [System.IO.Path]::Combine($PSScriptRoot, "plusfiveshellonly_scaled.fem")  
+
 
 # Sweep total beam height from 100.1 mm to 110.0 mm in 0.1 mm steps
 $thicknessSweep = foreach ($i in (1001..1100)) { $i / 10.0 }
