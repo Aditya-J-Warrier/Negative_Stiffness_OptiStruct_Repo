@@ -1,4 +1,4 @@
-# Large solver result files
+# OptiStruct generated results
 *.h3d
 *.res
 *.op2
@@ -6,25 +6,20 @@
 *.out
 *.stat
 
-# MATLAB generated data and temporary files
+# MATLAB saved data and temporary files
 *.mat
 *.asv
-*.m~
 
-# OptiStruct temporary and backup files
-*.fem.bak
-*.fem~
+# Temporary solver directories
+solver_output/
+scratch/
+temp/
 
 # Python temporary files
 __pycache__/
 *.pyc
 .venv/
 
-# Local simulation output directories
-solver_output/
-scratch/
-temp/
-
-# Operating system files
+# OS temporary files
 .DS_Store
 Thumbs.db
