@@ -1,10 +1,30 @@
-# Ignore massive binary results and solver scratch files
+# Large solver result files
 *.h3d
 *.res
 *.op2
 *.pch
 *.out
 *.stat
-*.html
-# Ignore MATLAB workspace states
+
+# MATLAB generated data and temporary files
 *.mat
+*.asv
+*.m~
+
+# OptiStruct temporary and backup files
+*.fem.bak
+*.fem~
+
+# Python temporary files
+__pycache__/
+*.pyc
+.venv/
+
+# Local simulation output directories
+solver_output/
+scratch/
+temp/
+
+# Operating system files
+.DS_Store
+Thumbs.db
